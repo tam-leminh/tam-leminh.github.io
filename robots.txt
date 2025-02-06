@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://tam-leminh.github.io/sitemap.xml
+Sitemap: https://tam-leminh.github.io/site.xml
