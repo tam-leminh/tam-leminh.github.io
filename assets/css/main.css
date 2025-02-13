@@ -1,12 +1,12 @@
 /******************************************************************************* Variables used throughout the theme. To adjust anything, simply edit the variables below and rebuild the theme. */
 /******************************************************************************* Themes */
-:root { --global-bg-color: #ffffff; --global-code-bg-color: rgba(181, 9, 172, 0.05); --global-text-color: #000000; --global-text-color-light: #828282; --global-theme-color: #B509AC; --global-hover-color: #B509AC; --global-footer-bg-color: #424242; --global-footer-text-color: #e8e8e8; --global-footer-link-color: #ffffff; --global-distill-app-color: #828282; --global-abbr-color: #B509AC; --global-abbr-preprint-color: #0076df; }
+:root { --global-bg-color: #ffffff; --global-code-bg-color: rgba(181, 9, 172, 0.05); --global-text-color: #000000; --global-text-color-light: #828282; --global-theme-color: #009f06; --global-hover-color: #B509AC; --global-footer-bg-color: #424242; --global-footer-text-color: #e8e8e8; --global-footer-link-color: #ffffff; --global-distill-app-color: #828282; --global-abbr-color: #009f06; --global-abbr-preprint-color: #0076df; }
 
 :root .fa-sun { display: none; }
 
 :root .fa-moon { padding-left: 10px; padding-top: 12px; display: block; }
 
-html[data-theme='dark'] { --global-bg-color: #424242; --global-code-bg-color: #2c3237; --global-text-color: #e8e8e8; --global-text-color-light: #e8e8e8; --global-theme-color: #2698BA; --global-hover-color: #2698BA; --global-footer-bg-color: #e8e8e8; --global-footer-text-color: #424242; --global-footer-link-color: #000000; --global-distill-app-color: #e8e8e8; --global-abbr-color: #B509AC; }
+html[data-theme='dark'] { --global-bg-color: #424242; --global-code-bg-color: #2c3237; --global-text-color: #e8e8e8; --global-text-color-light: #e8e8e8; --global-theme-color: #F29105; --global-hover-color: #2698BA; --global-footer-bg-color: #e8e8e8; --global-footer-text-color: #424242; --global-footer-link-color: #000000; --global-distill-app-color: #e8e8e8; --global-abbr-color: #F29105; }
 
 html[data-theme='dark'] .fa-sun { padding-left: 10px; padding-top: 12px; display: block; }
 
@@ -26,7 +26,9 @@ body.sticky-bottom-footer { padding-bottom: 0; }
 /****************************************************************************** Publications */
 /***************************************************************************** Projects */
 /******************************************************************************* Styles for the base elements of the theme. */
-p, h1, h2, h3, h4, h5, h6, em, div, span, strong { color: var(--global-text-color); }
+p, h1, h2, h3, h4, h5, h6, em, div, span, strong { color: var(--global-text-color); font-family: "Figtree"; font-weight: 450; }
+
+strong { font-weight: 700; }
 
 a, table.table a { color: var(--global-theme-color); }
 
@@ -46,7 +48,7 @@ blockquote { background: var(--global-bg-color); border-left: 2px solid var(--gl
 
 .profile .address { margin-bottom: 5px; margin-top: 5px; font-family: monospace; }
 
-.profile .address p { display: inline-block; margin: 0; }
+.profile .address p { display: inline-block; margin: 0; font-size: 0.9rem; font-family: monospace; }
 
 @media (min-width: 576px) { .profile { width: 30%; } .profile .address p { display: block; } }
 
