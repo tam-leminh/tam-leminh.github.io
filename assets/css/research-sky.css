@@ -31,6 +31,12 @@
 .sky-detail p { font-size: .88rem; line-height: 1.65; color: #e5eafa; }
 .sky-detail a { color: #b9dbff; text-decoration: underline; }
 .sky-detail small { display: block; color: #b8c6dd; margin-bottom: 9px; }
+.sky-thread { border-top: 1px solid #45536d; margin-top: 20px; padding-top: 18px; }
+.sky-thread h4 { color: #e5eafa; font-size: 1rem; margin-bottom: 10px; }
+.sky-thread p:last-child { margin-bottom: 0; }
+.sky-thread-choices { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+.sky-thread-choices button { background: #182842; color: #e5eafa; border: 1px solid #637795; border-radius: 5px; padding: 6px 10px; }
+.sky-thread-choices button[aria-pressed="true"] { border-color: #e5eafa; background: #304666; }
 .sky-legend { display: flex; flex-wrap: wrap; gap: 8px 20px; font-size: .72rem; padding: 18px 24px 0; color: #c0cbe0; }
 .sky-note { font-size: .72rem; color: #9eacc3; padding: 0 24px 16px; margin: 0; }
 .sky-catalogue summary { cursor: pointer; padding: 12px 0; }

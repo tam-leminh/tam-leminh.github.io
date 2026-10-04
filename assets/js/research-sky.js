@@ -11,6 +11,10 @@
   const visibleRegions = data.regions.filter(region => occupiedRegions.has(region.id));
   Array.from(select.options).forEach(option => { if (option.value && !occupiedRegions.has(option.value)) option.remove(); });
   const stars = new Map(publicStars.map(s => [s.id, s]));
+  const threads = data.threads.map(thread => ({ ...thread,
+    papers: thread.papers.filter(id => stars.has(id)),
+    edges: thread.edges.filter(edge => stars.has(edge.from) && stars.has(edge.to))
+  })).filter(thread => thread.papers.length > 1);
   const belongsToRegion = star => !select.value || [...(star.methods || []), ...(star.applications || [])].includes(select.value);
   const elements = new Map();
   const edges = [];
@@ -78,23 +82,23 @@
   visibleRegions.forEach(region => {
     make('text', { x: region.label.x, y: region.label.y, class: `sky-region sky-region--${region.kind}`, style: `fill: ${region.color}` }).textContent = region.name;
   });
-  data.links.forEach(link => {
+  threads.forEach(thread => thread.edges.forEach(link => {
     const a = stars.get(link.from), b = stars.get(link.to);
     if (!a || !b) return;
-    const el = make('line', { x1: a.x, y1: a.y, x2: b.x, y2: b.y, class: `sky-edge ${link.kind}`, 'aria-hidden': 'true' });
-    edges.push({ el, link });
-  });
+    const el = make('line', { x1: a.x, y1: a.y, x2: b.x, y2: b.y, class: 'sky-edge', 'aria-hidden': 'true' });
+    edges.push({ el, link, threadId: thread.id });
+  }));
   let selected = null;
+  let activeThread = null;
   function update() {
-    const selectedDirection = selected ? stars.get(selected).direction : null;
     elements.forEach((el, id) => {
-      const inConstellation = Boolean(selectedDirection && stars.get(id).direction === selectedDirection);
+      const inConstellation = Boolean(activeThread?.papers.includes(id));
       el.classList.toggle('is-constellation', inConstellation);
       el.classList.toggle('is-muted', !inConstellation && id !== selected && Boolean(selected || !belongsToRegion(stars.get(id))));
       el.setAttribute('aria-pressed', String(selected === id));
     });
-    edges.forEach(({ el, link }) => {
-      const highlighted = Boolean(selectedDirection && [link.from, link.to].every(id => stars.get(id).direction === selectedDirection));
+    edges.forEach(({ el, threadId }) => {
+      const highlighted = activeThread?.id === threadId;
       el.classList.toggle('is-adjacent', highlighted);
       el.classList.toggle('is-subdued', Boolean(selected && !highlighted));
       el.style.display = highlighted ? '' : 'none';
@@ -103,14 +107,17 @@
   function overview() {
     hideTooltip();
     selected = null;
+    activeThread = null;
     detail.replaceChildren();
     detail.hidden = true;
     update();
   }
-  function activate(id) {
+  function activate(id, threadId = null) {
     hideTooltip();
     detail.hidden = false;
     selected = id;
+    const availableThreads = threads.filter(thread => thread.papers.includes(id));
+    activeThread = availableThreads.find(thread => thread.id === threadId) || availableThreads[0] || null;
     const source = sources.get(id);
     detail.replaceChildren();
     const status = document.createElement('small');
@@ -133,6 +140,45 @@
       clone.querySelectorAll('[id]').forEach(el => el.removeAttribute('id'));
       detail.appendChild(clone);
     });
+    if (activeThread) {
+      const narrative = document.createElement('section');
+      narrative.className = 'sky-thread';
+      const heading = document.createElement('h4');
+      heading.textContent = activeThread.title;
+      narrative.appendChild(heading);
+      if (availableThreads.length > 1) {
+        const choices = document.createElement('div');
+        choices.className = 'sky-thread-choices';
+        choices.setAttribute('aria-label', 'Research threads involving this paper');
+        availableThreads.forEach(thread => {
+          const button = document.createElement('button');
+          button.type = 'button';
+          button.textContent = thread.title;
+          button.setAttribute('aria-pressed', String(thread.id === activeThread.id));
+          button.addEventListener('click', () => {
+            activate(id, thread.id);
+            detail.querySelector('.sky-thread-choices [aria-pressed="true"]').focus();
+          });
+          choices.appendChild(button);
+        });
+        narrative.appendChild(choices);
+      }
+      activeThread.edges.filter(edge => edge.text).forEach(edge => {
+        const paragraph = document.createElement('p');
+        // Support italic spans without interpreting narrative text as HTML.
+        edge.text.split(/(\*[^*]+\*)/g).forEach(part => {
+          if (part.startsWith('*') && part.endsWith('*') && part.length > 2) {
+            const emphasis = document.createElement('em');
+            emphasis.textContent = part.slice(1, -1);
+            paragraph.appendChild(emphasis);
+          } else {
+            paragraph.appendChild(document.createTextNode(part));
+          }
+        });
+        narrative.appendChild(paragraph);
+      });
+      detail.appendChild(narrative);
+    }
     update();
   }
   publicStars.forEach(star => {
