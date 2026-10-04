@@ -2,7 +2,7 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://tam-leminh.github.io/projects/old/</loc>
-<lastmod>2026-06-05T08:05:39+10:00</lastmod>
+<lastmod>2026-10-05T00:42:18+10:00</lastmod>
 </url>
 <url>
 <loc>https://tam-leminh.github.io/</loc>
@@ -18,6 +18,9 @@
 </url>
 <url>
 <loc>https://tam-leminh.github.io/publications/</loc>
+</url>
+<url>
+<loc>https://tam-leminh.github.io/research-sky/</loc>
 </url>
 <url>
 <loc>https://tam-leminh.github.io/assets/pdf/abs_Bernoulli_24_08_16.pdf</loc>
