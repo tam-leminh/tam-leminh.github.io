@@ -47,8 +47,8 @@
 
 <!-- Theming-->
 
-<script src="/assets/js/theme.js"></script>
-<script src="/assets/js/dark_mode.js"></script>
+<script src="/assets/js/theme.js?v=1794302485?v=1794302485"></script>
+<script src="/assets/js/dark_mode.js?v=1794302485?v=1794302485"></script>
 
 
 
@@ -85,14 +85,14 @@
 
   </head>
 
-  <body class="fixed-top-nav ">
+  <body class="fixed-top-nav sticky-bottom-footer">
 
     <!-- Header -->
 
     <header>
 
     <!-- Nav Bar -->
-    <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top">
+    <nav id="navbar" class="navbar navbar-light navbar-expand-md fixed-top">
     <div class="container">
       
         <!-- Social Icons -->
@@ -197,16 +197,17 @@
           
           
           
-          
-            <div class = "toggle-container">
-              <a id = "light-toggle">
-                  <i class="fas fa-moon"></i>
-                  <i class="fas fa-sun"></i>
-              </a>
-            </div>
-          
         </ul>
       </div>
+      
+        <div class="theme-picker" hidden>
+          <button id="light-toggle" type="button" aria-label="Switch to dark theme" title="Switch to dark theme">
+            <i class="fas fa-moon" aria-hidden="true"></i>
+            <i class="fas fa-sun" aria-hidden="true"></i>
+            <i class="fas fa-scroll" aria-hidden="true"></i>
+          </button>
+        </div>
+      
     </div>
   </nav>
 
@@ -261,17 +262,19 @@ In a past life, I studied aeronautics and aviation engineering and worked as a s
 <p><br /></p>
 
 <h3 id="news">News</h3>
+<p><em>last updated Nov 10, 2026</em></p>
 
 <ul>
+  <li><strong>Mar 1, 2027.</strong> I will start a new position as a permanent researcher at INRAE, in the <a href="https://eng-mistea.montpellier.hub.inrae.fr">MISTEA</a> unit in Montpellier, France.</li>
+  <li><strong>Nov 8, 2026.</strong> New preprint on arXiv: <a href="https://arxiv.org/abs/2611.11388">Uniform inference for U-statistics of exchangeable arrays under degeneracy</a>.</li>
   <li><strong>Jun 28–July 3, 2026</strong> Contributed session organization and poster presentation at ISBA World Meeting 2026 in Nagoya, Japan.</li>
-  <li><strong>Jun 1–5, 2026</strong> Contributed talk at Journées de Statistique 2026 in Clermont-Ferrand.</li>
-  <li><strong>May 11–31, 2026.</strong> I am visiting the Inria <a href="https://team.inria.fr/statify">Statify</a> team in Grenoble.</li>
+  <li><strong>Jun 1–5, 2026</strong> Contributed talk at Journées de Statistique 2026 in Clermont-Ferrand, France.</li>
+  <li><strong>May 11–31, 2026.</strong> I am visiting the Inria <a href="https://team.inria.fr/statify">Statify</a> team in Grenoble, France.</li>
   <li><strong>Mar 2, 2026.</strong> Our paper <a href="https://arxiv.org/abs/2501.04667">Natural variational annealing for multimodal optimization</a> has been accepted in Information and Inference.</li>
   <li><strong>Feb 20, 2026.</strong> New preprint on arXiv: <a href="https://arxiv.org/abs/2602.17956">A variational framework for modal estimation</a>.</li>
   <li><strong>Jan 14, 2026.</strong> My paper <a href="https://arxiv.org/abs/2401.07876">Characterization of the asymptotic behavior of U-statistics on row-column exchangeable matrices</a> has been accepted in Information and Inference.</li>
   <li><strong>Jan 7, 2026.</strong> I have moved to Brisbane, Australia to start a position as a Research Fellow at Griffith University. Wish me good luck.</li>
   <li><strong>Sep 15–Nov 14, 2025.</strong> I am visiting the <a href="https://www.jyu.fi/en/research-groups/predictive-community-ecology-group">Predictive Community Ecology</a> group at the University of Jyväskylä, Finland.</li>
-  <li><strong>Jun 23–27, 2025.</strong> Poster presentation at the International Conference on Bayesian Nonparametrics in Los Angeles, United States.</li>
 </ul>
 
 <p><a href="/archives">[Prior news here]</a></p>
@@ -317,8 +320,8 @@ In a past life, I studied aeronautics and aviation engineering and worked as a s
     <!-- Footer -->
 
     
-<footer class="fixed-bottom">
-  <div class="container mt-0">
+<footer class="sticky-bottom mt-5">
+  <div class="container">
     &copy; Copyright 2026 Tâm  Le Minh.
     Powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
 
@@ -343,7 +346,7 @@ In a past life, I studied aeronautics and aviation engineering and worked as a s
 
 
 <!-- Load Common JS -->
-<script src="/assets/js/common.js"></script>
+<script src="/assets/js/common.js?v=1794302485"></script>
 
 
 </html>

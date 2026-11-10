@@ -1,7 +1,10 @@
-$(document).ready(function() {
-    const mode_toggle = document.getElementById("light-toggle");
-
-    mode_toggle.addEventListener("click", function() {
-        toggleTheme(localStorage.getItem("theme"));
+document.addEventListener("DOMContentLoaded", function () {
+  const toggle = document.getElementById("light-toggle");
+  if (toggle) {
+    toggle.closest(".theme-picker").hidden = false;
+    toggle.addEventListener("click", () => {
+      setTheme(nextTheme());
     });
+  }
+  updateThemeControls();
 });

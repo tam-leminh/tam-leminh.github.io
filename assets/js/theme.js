@@ -1,51 +1,52 @@
-// Has to be in the head tag, otherwise a flicker effect will occur.
+// Apply the saved appearance in the head to avoid flashing the default theme.
+const siteThemes = ["light", "dark", "classic"];
+const nextTheme = () => {
+  const current = document.documentElement.getAttribute("data-theme");
+  return siteThemes[(siteThemes.indexOf(current) + 1) % siteThemes.length];
+};
 
-let toggleTheme = (theme) => {
-  if (theme == "dark") {
-    setTheme("light");
-  } else {
-    setTheme("dark");
-  }
-}
-
-
-let setTheme = (theme) =>  {
-  transTheme();
-  if (theme) {
-    document.documentElement.setAttribute("data-theme", theme);
-  }
-  else {
-    document.documentElement.removeAttribute("data-theme");
-  }
-  localStorage.setItem("theme", theme);
-  
-  // Updates the background of medium-zoom overlay.
-  if (typeof medium_zoom !== 'undefined') {
-    medium_zoom.update({
-      background: getComputedStyle(document.documentElement)
-          .getPropertyValue('--global-bg-color') + 'ee',  // + 'ee' for trasparency.
-    })
+const updateThemeControls = () => {
+  const toggle = document.getElementById("light-toggle");
+  if (toggle) {
+    const label = `Switch to ${nextTheme()} theme`;
+    toggle.setAttribute("aria-label", label);
+    toggle.title = label;
   }
 };
 
+const setTheme = (theme, persist = true) => {
+  if (!siteThemes.includes(theme)) return;
 
-let transTheme = () => {
-  document.documentElement.classList.add("transition");
-  window.setTimeout(() => {
-    document.documentElement.classList.remove("transition");
-  }, 500)
-}
+  document.documentElement.setAttribute("data-theme", theme);
 
-
-let initTheme = (theme) => {
-  if (theme == null) {
-    const userPref = window.matchMedia;
-    if (userPref && userPref('(prefers-color-scheme: dark)').matches) {
-        theme = 'dark';
+  if (persist) {
+    try {
+      localStorage.setItem("theme", theme);
+    } catch (error) {
+      // The selector still works when the browser blocks local storage.
     }
   }
-  setTheme(theme);
+
+  updateThemeControls();
+
+  if (typeof medium_zoom !== "undefined") {
+    medium_zoom.update({
+      background: getComputedStyle(document.documentElement)
+        .getPropertyValue("--global-bg-color").trim() + "ee",
+    });
+  }
+};
+
+let savedTheme;
+try {
+  savedTheme = localStorage.getItem("theme");
+} catch (error) {
+  // Fall back to the system preference if storage is unavailable.
 }
 
+const preferredTheme = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches
+  ? "dark"
+  : "light";
 
-initTheme(localStorage.getItem("theme"));
+// Also handles the old selector's stored "null" value and stale preferences.
+setTheme(siteThemes.includes(savedTheme) ? savedTheme : preferredTheme, false);

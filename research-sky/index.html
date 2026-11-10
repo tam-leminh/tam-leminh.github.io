@@ -49,8 +49,8 @@
 
 <!-- Theming-->
 
-<script src="/assets/js/theme.js"></script>
-<script src="/assets/js/dark_mode.js"></script>
+<script src="/assets/js/theme.js?v=1794302485?v=1794302485"></script>
+<script src="/assets/js/dark_mode.js?v=1794302485?v=1794302485"></script>
 
 
 
@@ -87,14 +87,14 @@
 
   </head>
 
-  <body class="fixed-top-nav ">
+  <body class="fixed-top-nav sticky-bottom-footer">
 
     <!-- Header -->
 
     <header>
 
     <!-- Nav Bar -->
-    <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top">
+    <nav id="navbar" class="navbar navbar-light navbar-expand-md fixed-top">
     <div class="container">
       
       <a class="navbar-brand title font-weight-lighter" href="https://tam-leminh.github.io/">
@@ -183,16 +183,17 @@
           
           
           
-          
-            <div class = "toggle-container">
-              <a id = "light-toggle">
-                  <i class="fas fa-moon"></i>
-                  <i class="fas fa-sun"></i>
-              </a>
-            </div>
-          
         </ul>
       </div>
+      
+        <div class="theme-picker" hidden>
+          <button id="light-toggle" type="button" aria-label="Switch to dark theme" title="Switch to dark theme">
+            <i class="fas fa-moon" aria-hidden="true"></i>
+            <i class="fas fa-sun" aria-hidden="true"></i>
+            <i class="fas fa-scroll" aria-hidden="true"></i>
+          </button>
+        </div>
+      
     </div>
   </nav>
 
@@ -211,7 +212,7 @@
 
   <article>
     
-<link rel="stylesheet" href="/assets/css/research-sky.css?v=1791127982">
+<link rel="stylesheet" href="/assets/css/research-sky.css?v=1794302485">
 <p class="sky-intro">Each star is a paper. Hover for a reference, select to explore its connections. On small screens, swipe across the sky.</p>
 <section class="research-sky" aria-label="Interactive research map">
   <div class="sky-toolbar" hidden>
@@ -224,55 +225,85 @@
   <div id="sky-detail" class="sky-detail" aria-live="polite" aria-atomic="true" hidden></div>
   <p class="sky-legend"><span>✦ Published</span> <span>○ Preprint</span></p>
 </section>
-<script id="sky-data" type="application/json">{"regions":[{"id":"theory","kind":"methodology","name":"Asymptotic theory & probability","color":"#91aff4","label":{"x":255,"y":65},"clouds":[{"x":460,"y":155,"rx":310,"ry":180}]},{"id":"bayes","kind":"methodology","name":"Latent structures & Bayesian modelling","color":"#c3a0e9","label":{"x":300,"y":365},"clouds":[{"x":455,"y":325,"rx":410,"ry":190}]},{"id":"variational","kind":"methodology","name":"Variational methods & optimization","color":"#f3cd9e","label":{"x":220,"y":480},"clouds":[{"x":420,"y":400,"rx":245,"ry":135}]},{"id":"ecology","kind":"application","name":"Ecology","color":"#94dbc0","label":{"x":140,"y":310},"clouds":[{"x":215,"y":250,"rx":180,"ry":135}]},{"id":"human-factors","kind":"application","name":"Human Factors","color":"#b6d7ec","label":{"x":670,"y":385},"clouds":[{"x":735,"y":315,"rx":125,"ry":115}]}],"stars":[{"id":"leminh2023ustatistics","methods":["theory"],"applications":[],"x":340,"y":165},{"id":"leminh2025hoeffding","methods":["theory"],"applications":[],"x":480,"y":125},{"id":"leminh2026characterization","methods":["theory"],"applications":[],"x":595,"y":195},{"id":"degenerate","methods":["theory"],"applications":[],"x":430,"y":160},{"id":"density","methods":["theory"],"applications":[],"x":625,"y":180},{"id":"bnp","methods":["bayes"],"applications":["ecology"],"x":705,"y":280},{"id":"birds","methods":["bayes"],"applications":["ecology"],"x":585,"y":405},{"id":"dubart2022coupling","methods":[],"applications":["ecology"],"x":205,"y":255},{"id":"crime","methods":["bayes"],"applications":[],"x":235,"y":325},{"id":"leminh2026natural","methods":["variational"],"applications":[],"x":365,"y":375},{"id":"leminh2026variational","methods":["variational"],"applications":[],"x":490,"y":410},{"id":"li2019visual","methods":[],"applications":["human-factors"],"x":735,"y":315}],"threads":[{"id":"ecological-network-inference","title":"From ecological networks to U-statistics","papers":["dubart2022coupling","leminh2023ustatistics","leminh2025hoeffding","leminh2026characterization"],"edges":[{"from":"dubart2022coupling","to":"leminh2023ustatistics","relation":"ecological-question-and-theoretical-response","text":"An ecological question prompted the theoretical work on U-statistics for bipartite networks, first published in *ESAIM: Probability and Statistics* and subsequently extended in *Electronic Journal of Statistics* and *Information and Inference*. The ecological chapter also proposed this framework as an approach to network analysis."},{"from":"leminh2023ustatistics","to":"leminh2025hoeffding","relation":"related-theoretical-work"},{"from":"leminh2025hoeffding","to":"leminh2026characterization","relation":"related-theoretical-work"}]},{"id":"variational-methods","title":"Variational methods and modal estimation","papers":["leminh2026natural","leminh2026variational"],"edges":[{"from":"leminh2026natural","to":"leminh2026variational","relation":"shared-methodological-framework","text":"Building on Khan and Rue’s Bayesian Learning Rule, we developed a variational approach to multimodal optimization (*Information and Inference*), then extended this framework to the statistical problem of mode estimation (*preprint*)."}]}],"projects":[{"id":"degenerate","title":"Inference for degenerate network U-statistics","summary":"Follow-up work on degeneracy, variance estimation and inference for row-column exchangeable arrays."},{"id":"density","title":"Sampling and density in bipartite networks","summary":"Studying how marginal frequencies and their coupling shape network density as interaction events accumulate."},{"id":"bnp","title":"Bayesian nonparametric interaction networks","summary":"Modelling latent communities and partner dependence, with prediction of previously unobserved nodes."},{"id":"birds","title":"Community structure and species exclusions","summary":"Bayesian mixture modelling of ecological counts, distinguishing community composition from sampling zeros. Applications include Finnish birds and environmental DNA."},{"id":"crime","title":"Latent communities and roles in collective events","summary":"Modelling co-participation events to distinguish community membership from actor roles, motivated by co-offending networks."}]}</script>
+<script id="sky-data" type="application/json">{"regions":[{"id":"theory","kind":"methodology","name":"Asymptotic theory & probability","color":"#91aff4","label":{"x":255,"y":65},"clouds":[{"x":460,"y":155,"rx":310,"ry":180}]},{"id":"bayes","kind":"methodology","name":"Latent structures & Bayesian modelling","color":"#c3a0e9","label":{"x":300,"y":365},"clouds":[{"x":455,"y":325,"rx":410,"ry":190}]},{"id":"variational","kind":"methodology","name":"Variational methods & optimization","color":"#f3cd9e","label":{"x":220,"y":480},"clouds":[{"x":420,"y":400,"rx":245,"ry":135}]},{"id":"ecology","kind":"application","name":"Ecology","color":"#94dbc0","label":{"x":140,"y":310},"clouds":[{"x":215,"y":250,"rx":180,"ry":135}]},{"id":"human-factors","kind":"application","name":"Human Factors","color":"#b6d7ec","label":{"x":670,"y":385},"clouds":[{"x":735,"y":315,"rx":125,"ry":115}]}],"stars":[{"id":"leminh2023ustatistics","methods":["theory"],"applications":[],"x":340,"y":165},{"id":"leminh2025hoeffding","methods":["theory"],"applications":[],"x":480,"y":125},{"id":"leminh2026characterization","methods":["theory"],"applications":[],"x":595,"y":195},{"id":"leminh2026uniform","methods":["theory"],"applications":[],"x":715,"y":130},{"id":"degenerate","methods":["theory"],"applications":[],"x":430,"y":160},{"id":"density","methods":["theory"],"applications":[],"x":625,"y":180},{"id":"bnp","methods":["bayes"],"applications":["ecology"],"x":705,"y":280},{"id":"birds","methods":["bayes"],"applications":["ecology"],"x":585,"y":405},{"id":"dubart2022coupling","methods":[],"applications":["ecology"],"x":205,"y":255},{"id":"crime","methods":["bayes"],"applications":[],"x":235,"y":325},{"id":"leminh2026natural","methods":["variational"],"applications":[],"x":365,"y":375},{"id":"leminh2026variational","methods":["variational"],"applications":[],"x":490,"y":410},{"id":"li2019visual","methods":[],"applications":["human-factors"],"x":735,"y":315}],"threads":[{"id":"ecological-network-inference","title":"From ecological networks to U-statistics","papers":["dubart2022coupling","leminh2023ustatistics","leminh2025hoeffding","leminh2026characterization","leminh2026uniform"],"edges":[{"from":"dubart2022coupling","to":"leminh2023ustatistics","relation":"ecological-question-and-theoretical-response","text":"An ecological question prompted the theoretical work on U-statistics for bipartite networks, first published in *ESAIM: Probability and Statistics* and subsequently extended in *Electronic Journal of Statistics* and *Information and Inference*. The ecological chapter also proposed this framework as an approach to network analysis."},{"from":"leminh2023ustatistics","to":"leminh2025hoeffding","relation":"related-theoretical-work"},{"from":"leminh2025hoeffding","to":"leminh2026characterization","relation":"related-theoretical-work"},{"from":"leminh2026characterization","to":"leminh2026uniform","relation":"related-theoretical-work"}]},{"id":"variational-methods","title":"Variational methods and modal estimation","papers":["leminh2026natural","leminh2026variational"],"edges":[{"from":"leminh2026natural","to":"leminh2026variational","relation":"shared-methodological-framework","text":"Building on Khan and Rue’s Bayesian Learning Rule, we developed a variational approach to multimodal optimization (*Information and Inference*), then extended this framework to the statistical problem of mode estimation (*preprint*)."}]}],"projects":[{"id":"degenerate","title":"Inference for degenerate network U-statistics","summary":"Follow-up work on degeneracy, variance estimation and inference for row-column exchangeable arrays."},{"id":"density","title":"Sampling and density in bipartite networks","summary":"Studying how marginal frequencies and their coupling shape network density as interaction events accumulate."},{"id":"bnp","title":"Bayesian nonparametric interaction networks","summary":"Modelling latent communities and partner dependence, with prediction of previously unobserved nodes."},{"id":"birds","title":"Community structure and species exclusions","summary":"Bayesian mixture modelling of ecological counts, distinguishing community composition from sampling zeros. Applications include Finnish birds and environmental DNA."},{"id":"crime","title":"Latent communities and roles in collective events","summary":"Modelling co-participation events to distinguish community membership from actor roles, motivated by co-offending networks."}]}</script>
 <details class="sky-catalogue" open>
   <summary>Browse all works as a list</summary>
   <h2>Publications</h2>
-  <div data-sky-status="Published"><ol class="bibliography"><li><article class="sky-source" data-id="leminh2026natural" data-year="2026" data-authors="Le Minh et al." data-venue="Information and Inference: A Journal of the IMA">
+  <div data-sky-status="Published"><ol class="bibliography"><li>
+<article id="leminh2026natural" class="sky-source" data-id="leminh2026natural" data-year="2026" data-authors="Le Minh et al." data-venue="Information and Inference: A Journal of the IMA">
   <h3>Natural variational annealing for multimodal optimization</h3>
-  <p class="sky-citation"><span id="leminh2026natural">Le Minh, T., Arbel, J., Moellenhoff, T., Khan, M. E., &amp; Forbes, F. (2026). Natural variational annealing for multimodal optimization. <i>Information and Inference: A Journal of the IMA</i>, <i>15</i>(2). https://doi.org/10.1093/imaiai/iaag008</span></p>
+  <p class="sky-citation"><span >T. Le Minh, J. Arbel, T. Möllenhoff, M. E. Khan, &amp; F. Forbes. (2026). Natural variational annealing for multimodal optimization. <i>Information and Inference: A Journal of the IMA</i>, <i>15</i>(2), iaag008. https://doi.org/10.1093/imaiai/iaag008</span></p>
+  <span class="classic-citation"><span class="publication-authors">T. Le Minh, J. Arbel, T. Möllenhoff, M. E. Khan and F. Forbes</span>. <strong>Natural variational annealing for multimodal optimization</strong>. <i>Information and Inference: A Journal of the IMA</i>, 2026.</span>
+
   <a href="https://doi.org/10.1093/imaiai/iaag008">Read publication</a>
 </article>
 </li>
-<li><article class="sky-source" data-id="leminh2026characterization" data-year="2026" data-authors="Le Minh" data-venue="Information and Inference: A Journal of the IMA">
+<li>
+<article id="leminh2026characterization" class="sky-source" data-id="leminh2026characterization" data-year="2026" data-authors="Le Minh" data-venue="Information and Inference: A Journal of the IMA">
   <h3>Characterization of the asymptotic behavior of U-statistics on row-column exchangeable matrices</h3>
-  <p class="sky-citation"><span id="leminh2026characterization">Le Minh, T. (2026). Characterization of the asymptotic behavior of U-statistics on row-column exchangeable matrices. <i>Information and Inference: A Journal of the IMA</i>, <i>15</i>(1), iaag001. https://doi.org/10.1093/imaiai/iaag001</span></p>
+  <p class="sky-citation"><span >T. Le Minh. (2026). Characterization of the asymptotic behavior of U-statistics on row-column exchangeable matrices. <i>Information and Inference: A Journal of the IMA</i>, <i>15</i>(1), iaag001. https://doi.org/10.1093/imaiai/iaag001</span></p>
+  <span class="classic-citation"><span class="publication-authors">T. Le Minh</span>. <strong>Characterization of the asymptotic behavior of U-statistics on row-column exchangeable matrices</strong>. <i>Information and Inference: A Journal of the IMA</i>, 2026.</span>
+
   <a href="https://doi.org/10.1093/imaiai/iaag001">Read publication</a>
 </article>
 </li>
-<li><article class="sky-source" data-id="leminh2025hoeffding" data-year="2025" data-authors="Le Minh et al." data-venue="Electronic Journal of Statistics">
+<li>
+<article id="leminh2025hoeffding" class="sky-source" data-id="leminh2025hoeffding" data-year="2025" data-authors="Le Minh et al." data-venue="Electronic Journal of Statistics">
   <h3>Hoeffding-type decomposition for U-statistics on bipartite networks</h3>
-  <p class="sky-citation"><span id="leminh2025hoeffding">Le Minh, T., Donnet, S., Massol, F., &amp; Robin, S. (2025). Hoeffding-type decomposition for U-statistics on bipartite networks. <i>Electronic Journal of Statistics</i>, <i>19</i>(1), 2829–2875. https://doi.org/10.1214/25-EJS2402</span></p>
+  <p class="sky-citation"><span >T. Le Minh, S. Donnet, F. Massol, &amp; S. Robin. (2025). Hoeffding-type decomposition for U-statistics on bipartite networks. <i>Electronic Journal of Statistics</i>, <i>19</i>(1), 2829–2875. https://doi.org/10.1214/25-EJS2402</span></p>
+  <span class="classic-citation"><span class="publication-authors">T. Le Minh, S. Donnet, F. Massol and S. Robin</span>. <strong>Hoeffding-type decomposition for U-statistics on bipartite networks</strong>. <i>Electronic Journal of Statistics</i>, 2025.</span>
+
   <a href="https://doi.org/10.1214/25-EJS2402">Read publication</a>
 </article>
 </li>
-<li><article class="sky-source" data-id="leminh2023ustatistics" data-year="2023" data-authors="Le Minh" data-venue="ESAIM: Probability and Statistics">
+<li>
+<article id="leminh2023ustatistics" class="sky-source" data-id="leminh2023ustatistics" data-year="2023" data-authors="Le Minh" data-venue="ESAIM: Probability and Statistics">
   <h3>U-statistics on bipartite exchangeable networks</h3>
-  <p class="sky-citation"><span id="leminh2023ustatistics">Le Minh, T. (2023). U-statistics on bipartite exchangeable networks. <i>ESAIM: Probability and Statistics</i>, <i>27</i>, 576–620. https://doi.org/10.1051/ps/2023010</span></p>
+  <p class="sky-citation"><span >T. Le Minh. (2023). U-statistics on bipartite exchangeable networks. <i>ESAIM: Probability and Statistics</i>, <i>27</i>, 576–620. https://doi.org/10.1051/ps/2023010</span></p>
+  <span class="classic-citation"><span class="publication-authors">T. Le Minh</span>. <strong>U-statistics on bipartite exchangeable networks</strong>. <i>ESAIM: Probability and Statistics</i>, 2023.</span>
+
   <a href="https://doi.org/10.1051/ps/2023010">Read publication</a>
 </article>
 </li>
-<li><article class="sky-source" data-id="dubart2022coupling" data-year="2022" data-authors="Dubart et al." data-venue="Advances in Ecological Research">
+<li>
+<article id="dubart2022coupling" class="sky-source" data-id="dubart2022coupling" data-year="2022" data-authors="Dubart et al." data-venue="Advances in Ecological Research">
   <h3>Coupling ecological network analysis with high-throughput sequencing-based surveys: Lessons from the next-generation biomonitoring project</h3>
-  <p class="sky-citation"><span id="dubart2022coupling">Dubart, M., Alonso, P., Barroso-Bergada, D., Becker, N., Bethune, K., Bohan, D., Boury, C., Cambon, M., Canard, E., Chancerel, E., &amp; others. (2022). Coupling ecological network analysis with high-throughput sequencing-based surveys: Lessons from the next-generation biomonitoring project. <i>Advances in Ecological Research</i>, <i>65</i>, 367–430. https://doi.org/10.1016/bs.aecr.2021.10.007</span></p>
+  <p class="sky-citation"><span >M. Dubart, P. Alonso, D. Barroso-Bergada, N. Becker, K. Bethune, D. A. Bohan, C. Boury, M. Cambon, E. Canard, E. Chancerel, J. Chiquet, P. David, N. de Manincor, S. Donnet, A. Duputié, B. Facon, E. Guichoux, T. Le Minh, S. Ortiz-Martínez, … F. Massol. (2022). Coupling ecological network analysis with high-throughput sequencing-based surveys: Lessons from the next-generation biomonitoring project. <i>Advances in Ecological Research</i>, <i>65</i>, 367–430. https://doi.org/10.1016/bs.aecr.2021.10.007</span></p>
+  <span class="classic-citation"><span class="publication-authors">M. Dubart, P. Alonso, D. Barroso-Bergada, N. Becker, K. Bethune<span class="remaining-authors">, D. A. Bohan, C. Boury, M. Cambon, E. Canard, E. Chancerel, J. Chiquet, P. David, N. de Manincor, S. Donnet, A. Duputié, B. Facon, E. Guichoux, T. Le Minh, S. Ortiz-Martínez, L. Piouceau, A. Sacco-Martret de Préville, M. Plantegenest, C. Poux, V. Ravigné, S. Robin, M. Trillat, C. Vacher, C. Vernière and F. Massol</span><button type="button" class="author-toggle" hidden data-collapsed-label="and 24 more authors">and 24 more authors</button></span>. <strong>Coupling ecological network analysis with high-throughput sequencing-based surveys: Lessons from the next-generation biomonitoring project</strong>. <i>Advances in Ecological Research</i>, 2022.</span>
+
   <a href="https://doi.org/10.1016/bs.aecr.2021.10.007">Read publication</a>
 </article>
 </li>
-<li><article class="sky-source" data-id="li2019visual" data-year="2019" data-authors="Li et al." data-venue="International Journal of Industrial Ergonomics">
+<li>
+<article id="li2019visual" class="sky-source" data-id="li2019visual" data-year="2019" data-authors="Li et al." data-venue="International Journal of Industrial Ergonomics">
   <h3>Visual scan patterns reflect to human-computer interactions on processing different types of messages in the flight deck</h3>
-  <p class="sky-citation"><span id="li2019visual">Li, W.-C., Zhang, J., Le Minh, T., Cao, J., &amp; Wang, L. (2019). Visual scan patterns reflect to human-computer interactions on processing different types of messages in the flight deck. <i>International Journal of Industrial Ergonomics</i>, <i>72</i>, 54–60. https://doi.org/10.1016/j.ergon.2019.04.003</span></p>
+  <p class="sky-citation"><span >W.-C. Li, J. Zhang, T. Le Minh, J. Cao, &amp; L. Wang. (2019). Visual scan patterns reflect to human-computer interactions on processing different types of messages in the flight deck. <i>International Journal of Industrial Ergonomics</i>, <i>72</i>, 54–60. https://doi.org/10.1016/j.ergon.2019.04.003</span></p>
+  <span class="classic-citation"><span class="publication-authors">W.-C. Li, J. Zhang, T. Le Minh, J. Cao and L. Wang</span>. <strong>Visual scan patterns reflect to human-computer interactions on processing different types of messages in the flight deck</strong>. <i>International Journal of Industrial Ergonomics</i>, 2019.</span>
+
   <a href="https://doi.org/10.1016/j.ergon.2019.04.003">Read publication</a>
 </article>
 </li></ol></div>
   <h2>Preprints</h2>
-  <div data-sky-status="Preprint"><ol class="bibliography"><li><article class="sky-source" data-id="leminh2026variational" data-year="2026" data-authors="Le Minh et al." data-venue="arXiv preprint">
+  <div data-sky-status="Preprint"><ol class="bibliography"><li>
+<article id="leminh2026uniform" class="sky-source" data-id="leminh2026uniform" data-year="2026" data-authors="Le Minh" data-venue="arXiv preprint">
+  <h3>Uniform inference for U-statistics of exchangeable arrays under degeneracy</h3>
+  <p class="sky-citation"><span >T. Le Minh. (2026). Uniform inference for U-statistics of exchangeable arrays under degeneracy. <i>ArXiv Preprint</i>.</span></p>
+  <span class="classic-citation"><span class="publication-authors">T. Le Minh</span>. <strong>Uniform inference for U-statistics of exchangeable arrays under degeneracy</strong>. <i>arXiv preprint</i>, 2026.</span>
+
+  <a href="https://arxiv.org/abs/2611.11388">Read preprint</a>
+</article>
+</li>
+<li>
+<article id="leminh2026variational" class="sky-source" data-id="leminh2026variational" data-year="2026" data-authors="Le Minh et al." data-venue="arXiv preprint">
   <h3>A variational framework for modal estimation</h3>
-  <p class="sky-citation"><span id="leminh2026variational">Le Minh, T., Arbel, J., Forbes, F., &amp; Nguyen, H. D. (2026). A variational framework for modal estimation. <i>ArXiv Preprint</i>.</span></p>
+  <p class="sky-citation"><span >T. Le Minh, J. Arbel, F. Forbes, &amp; H. D. Nguyen. (2026). A variational framework for modal estimation. <i>ArXiv Preprint</i>.</span></p>
+  <span class="classic-citation"><span class="publication-authors">T. Le Minh, J. Arbel, F. Forbes and H. D. Nguyen</span>. <strong>A variational framework for modal estimation</strong>. <i>arXiv preprint</i>, 2026.</span>
+
   <a href="https://arxiv.org/abs/2602.17956">Read preprint</a>
 </article>
 </li></ol></div>
 </details>
-<script defer src="/assets/js/research-sky.js?v=1791127982"></script>
+<script defer src="/assets/js/research-sky.js?v=1794302485"></script>
 
   </article>
 
@@ -283,8 +314,8 @@
     <!-- Footer -->
 
     
-<footer class="fixed-bottom">
-  <div class="container mt-0">
+<footer class="sticky-bottom mt-5">
+  <div class="container">
     &copy; Copyright 2026 Tâm  Le Minh.
     Powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
 
@@ -309,7 +340,7 @@
 
 
 <!-- Load Common JS -->
-<script src="/assets/js/common.js"></script>
+<script src="/assets/js/common.js?v=1794302485"></script>
 
 
 </html>

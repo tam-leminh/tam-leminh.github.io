@@ -49,8 +49,8 @@
 
 <!-- Theming-->
 
-<script src="/assets/js/theme.js"></script>
-<script src="/assets/js/dark_mode.js"></script>
+<script src="/assets/js/theme.js?v=1794302485?v=1794302485"></script>
+<script src="/assets/js/dark_mode.js?v=1794302485?v=1794302485"></script>
 
 
 
@@ -87,14 +87,14 @@
 
   </head>
 
-  <body class="fixed-top-nav ">
+  <body class="fixed-top-nav sticky-bottom-footer">
 
     <!-- Header -->
 
     <header>
 
     <!-- Nav Bar -->
-    <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top">
+    <nav id="navbar" class="navbar navbar-light navbar-expand-md fixed-top">
     <div class="container">
       
       <a class="navbar-brand title font-weight-lighter" href="https://tam-leminh.github.io/">
@@ -183,16 +183,17 @@
           
           
           
-          
-            <div class = "toggle-container">
-              <a id = "light-toggle">
-                  <i class="fas fa-moon"></i>
-                  <i class="fas fa-sun"></i>
-              </a>
-            </div>
-          
         </ul>
       </div>
+      
+        <div class="theme-picker" hidden>
+          <button id="light-toggle" type="button" aria-label="Switch to dark theme" title="Switch to dark theme">
+            <i class="fas fa-moon" aria-hidden="true"></i>
+            <i class="fas fa-sun" aria-hidden="true"></i>
+            <i class="fas fa-scroll" aria-hidden="true"></i>
+          </button>
+        </div>
+      
     </div>
   </nav>
 
@@ -217,7 +218,8 @@
 
   <ol class="bibliography"></ol>
 
-  <ol class="bibliography"><li><div class="row">
+  <ol class="bibliography"><li>
+<div class="row publication-entry">
   <div class="col-sm-2 abbr">
   
     
@@ -226,70 +228,12 @@
   
   </div>
 
-  <div id="leminh2026variational" class="col-sm-8">
+  <div id="leminh2026uniform" class="col-sm-10 publication-content">
+    <div class="modern-citation">
     
-      <div class="title">A variational framework for modal estimation</div>
-      <div class="author">
-        
-          
-          
-          
-          
-          
-          
-            
-              
-                <em>Le Minh, T.</em>,
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                  Arbel, J.,
-                
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                  Forbes, F.,
-                
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                  and Nguyen, H. D.
-                
-              
-            
-          
-        
-      </div>
+      <div class="title">Uniform inference for U-statistics of exchangeable arrays under degeneracy</div>
+      <div class="author"><span class="publication-authors">T. Le Minh</span>
+</div>
 
       <div class="periodical">
       
@@ -301,13 +245,17 @@
       </div>
     
 
+    </div>
+    <span class="classic-citation"><span class="publication-authors">T. Le Minh</span>. <strong>Uniform inference for U-statistics of exchangeable arrays under degeneracy</strong>. <i>arXiv preprint</i>, 2026.</span>
+
+
     <div class="links">
     
     
-      <a href="http://arxiv.org/abs/2602.17956" class="btn btn-sm z-depth-0" role="button" target="_blank">arXiv</a>
+      <a href="http://arxiv.org/abs/2611.11388" class="publication-link btn btn-sm z-depth-0" target="_blank">arXiv</a>
     
     
-        <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
+        <a href="#leminh2026uniform-bibtex" class="bibtex publication-link btn btn-sm z-depth-0" aria-controls="leminh2026uniform-bibtex" aria-expanded="false">Bib</a>
     
     
     
@@ -327,7 +275,79 @@
 
     <!-- Hidden bibtex block -->
     
-    <div class="bibtex hidden">
+    <div id="leminh2026uniform-bibtex" class="bibtex hidden">
+      <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">leminh2026uniform</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{Uniform inference for U-statistics of exchangeable arrays under degeneracy}</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Le Minh, T.}</span><span class="p">,</span>
+  <span class="na">journal</span> <span class="p">=</span> <span class="s">{arXiv preprint}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2026}</span><span class="p">,</span>
+  <span class="na">abbr</span> <span class="p">=</span> <span class="s">{arXiv}</span><span class="p">,</span>
+  <span class="na">arxiv</span> <span class="p">=</span> <span class="s">{2611.11388}</span><span class="p">,</span>
+  <span class="na">bibtex_show</span> <span class="p">=</span> <span class="s">{}</span>
+<span class="p">}</span></code></pre></figure>
+    </div>
+    
+  </div>
+</div>
+</li>
+<li>
+<div class="row publication-entry">
+  <div class="col-sm-2 abbr">
+  
+    
+    <abbr class="badge">arXiv</abbr>
+    
+  
+  </div>
+
+  <div id="leminh2026variational" class="col-sm-10 publication-content">
+    <div class="modern-citation">
+    
+      <div class="title">A variational framework for modal estimation</div>
+      <div class="author"><span class="publication-authors">T. Le Minh, J. Arbel, F. Forbes and H. D. Nguyen</span>
+</div>
+
+      <div class="periodical">
+      
+        <em>arXiv preprint,</em>
+      
+      
+        2026
+      
+      </div>
+    
+
+    </div>
+    <span class="classic-citation"><span class="publication-authors">T. Le Minh, J. Arbel, F. Forbes and H. D. Nguyen</span>. <strong>A variational framework for modal estimation</strong>. <i>arXiv preprint</i>, 2026.</span>
+
+
+    <div class="links">
+    
+    
+      <a href="http://arxiv.org/abs/2602.17956" class="publication-link btn btn-sm z-depth-0" target="_blank">arXiv</a>
+    
+    
+        <a href="#leminh2026variational-bibtex" class="bibtex publication-link btn btn-sm z-depth-0" aria-controls="leminh2026variational-bibtex" aria-expanded="false">Bib</a>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </div>
+
+    <!-- Hidden abstract block -->
+    
+
+    <!-- Hidden bibtex block -->
+    
+    <div id="leminh2026variational-bibtex" class="bibtex hidden">
       <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">leminh2026variational</span><span class="p">,</span>
   <span class="na">title</span> <span class="p">=</span> <span class="s">{A variational framework for modal estimation}</span><span class="p">,</span>
   <span class="na">author</span> <span class="p">=</span> <span class="s">{Le Minh, T. and Arbel, J. and Forbes, F. and Nguyen, H. D.}</span><span class="p">,</span>
@@ -367,7 +387,8 @@
 
   <ol class="bibliography"></ol>
 
-  <ol class="bibliography"><li><div class="row">
+  <ol class="bibliography"><li>
+<div class="row publication-entry">
   <div class="col-sm-2 abbr">
   
     
@@ -376,85 +397,12 @@
   
   </div>
 
-  <div id="leminh2026natural" class="col-sm-8">
+  <div id="leminh2026natural" class="col-sm-10 publication-content">
+    <div class="modern-citation">
     
       <div class="title">Natural variational annealing for multimodal optimization</div>
-      <div class="author">
-        
-          
-          
-          
-          
-          
-          
-            
-              
-                <em>Le Minh, T.</em>,
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                  Arbel, J.,
-                
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                  Moellenhoff, T.,
-                
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                  Khan, M. E.,
-                
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                  and Forbes, F.
-                
-              
-            
-          
-        
-      </div>
+      <div class="author"><span class="publication-authors">T. Le Minh, J. Arbel, T. Möllenhoff, M. E. Khan and F. Forbes</span>
+</div>
 
       <div class="periodical">
       
@@ -466,16 +414,20 @@
       </div>
     
 
+    </div>
+    <span class="classic-citation"><span class="publication-authors">T. Le Minh, J. Arbel, T. Möllenhoff, M. E. Khan and F. Forbes</span>. <strong>Natural variational annealing for multimodal optimization</strong>. <i>Information and Inference: A Journal of the IMA</i>, 2026.</span>
+
+
     <div class="links">
     
     
-      <a href="http://arxiv.org/abs/2501.04667" class="btn btn-sm z-depth-0" role="button" target="_blank">arXiv</a>
+      <a href="http://arxiv.org/abs/2501.04667" class="publication-link btn btn-sm z-depth-0" target="_blank">arXiv</a>
     
     
-        <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
+        <a href="#leminh2026natural-bibtex" class="bibtex publication-link btn btn-sm z-depth-0" aria-controls="leminh2026natural-bibtex" aria-expanded="false">Bib</a>
     
     
-        <a href="https://doi.org/10.1093/imaiai/iaag008" class="btn btn-sm z-depth-0" role="button" target="_blank">DOI</a>
+        <a href="https://doi.org/10.1093/imaiai/iaag008" class="publication-link btn btn-sm z-depth-0" target="_blank">DOI</a>
     
     
     
@@ -494,13 +446,14 @@
 
     <!-- Hidden bibtex block -->
     
-    <div class="bibtex hidden">
+    <div id="leminh2026natural-bibtex" class="bibtex hidden">
       <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">leminh2026natural</span><span class="p">,</span>
   <span class="na">title</span> <span class="p">=</span> <span class="s">{Natural variational annealing for multimodal optimization}</span><span class="p">,</span>
-  <span class="na">author</span> <span class="p">=</span> <span class="s">{Le Minh, T. and Arbel, J. and Moellenhoff, T. and Khan, M. E. and Forbes, F.}</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Le Minh, T. and Arbel, J. and Möllenhoff, T. and Khan, M. E. and Forbes, F.}</span><span class="p">,</span>
   <span class="na">journal</span> <span class="p">=</span> <span class="s">{Information and Inference: A Journal of the IMA}</span><span class="p">,</span>
   <span class="na">volume</span> <span class="p">=</span> <span class="s">{15}</span><span class="p">,</span>
   <span class="na">number</span> <span class="p">=</span> <span class="s">{2}</span><span class="p">,</span>
+  <span class="na">pages</span> <span class="p">=</span> <span class="s">{iaag008}</span><span class="p">,</span>
   <span class="na">year</span> <span class="p">=</span> <span class="s">{2026}</span><span class="p">,</span>
   <span class="na">doi</span> <span class="p">=</span> <span class="s">{10.1093/imaiai/iaag008}</span><span class="p">,</span>
   <span class="na">abbr</span> <span class="p">=</span> <span class="s">{Inf. Inference}</span><span class="p">,</span>
@@ -512,7 +465,8 @@
   </div>
 </div>
 </li>
-<li><div class="row">
+<li>
+<div class="row publication-entry">
   <div class="col-sm-2 abbr">
   
     
@@ -521,23 +475,12 @@
   
   </div>
 
-  <div id="leminh2026characterization" class="col-sm-8">
+  <div id="leminh2026characterization" class="col-sm-10 publication-content">
+    <div class="modern-citation">
     
       <div class="title">Characterization of the asymptotic behavior of U-statistics on row-column exchangeable matrices</div>
-      <div class="author">
-        
-          
-          
-          
-          
-          
-          
-            
-              <em>Le Minh, T.</em>
-            
-          
-        
-      </div>
+      <div class="author"><span class="publication-authors">T. Le Minh</span>
+</div>
 
       <div class="periodical">
       
@@ -549,16 +492,20 @@
       </div>
     
 
+    </div>
+    <span class="classic-citation"><span class="publication-authors">T. Le Minh</span>. <strong>Characterization of the asymptotic behavior of U-statistics on row-column exchangeable matrices</strong>. <i>Information and Inference: A Journal of the IMA</i>, 2026.</span>
+
+
     <div class="links">
     
     
-      <a href="http://arxiv.org/abs/2401.07876" class="btn btn-sm z-depth-0" role="button" target="_blank">arXiv</a>
+      <a href="http://arxiv.org/abs/2401.07876" class="publication-link btn btn-sm z-depth-0" target="_blank">arXiv</a>
     
     
-        <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
+        <a href="#leminh2026characterization-bibtex" class="bibtex publication-link btn btn-sm z-depth-0" aria-controls="leminh2026characterization-bibtex" aria-expanded="false">Bib</a>
     
     
-        <a href="https://doi.org/10.1093/imaiai/iaag001" class="btn btn-sm z-depth-0" role="button" target="_blank">DOI</a>
+        <a href="https://doi.org/10.1093/imaiai/iaag001" class="publication-link btn btn-sm z-depth-0" target="_blank">DOI</a>
     
     
     
@@ -577,7 +524,7 @@
 
     <!-- Hidden bibtex block -->
     
-    <div class="bibtex hidden">
+    <div id="leminh2026characterization-bibtex" class="bibtex hidden">
       <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">leminh2026characterization</span><span class="p">,</span>
   <span class="na">title</span> <span class="p">=</span> <span class="s">{Characterization of the asymptotic behavior of U-statistics on row-column exchangeable matrices}</span><span class="p">,</span>
   <span class="na">author</span> <span class="p">=</span> <span class="s">{Le Minh, T.}</span><span class="p">,</span>
@@ -597,7 +544,8 @@
 </div>
 </li></ol>
 
-  <ol class="bibliography"><li><div class="row">
+  <ol class="bibliography"><li>
+<div class="row publication-entry">
   <div class="col-sm-2 abbr">
   
     
@@ -606,70 +554,12 @@
   
   </div>
 
-  <div id="leminh2025hoeffding" class="col-sm-8">
+  <div id="leminh2025hoeffding" class="col-sm-10 publication-content">
+    <div class="modern-citation">
     
       <div class="title">Hoeffding-type decomposition for U-statistics on bipartite networks</div>
-      <div class="author">
-        
-          
-          
-          
-          
-          
-          
-            
-              
-                <em>Le Minh, T.</em>,
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                  Donnet, S.,
-                
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                  Massol, F.,
-                
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                  and Robin, S.
-                
-              
-            
-          
-        
-      </div>
+      <div class="author"><span class="publication-authors">T. Le Minh, S. Donnet, F. Massol and S. Robin</span>
+</div>
 
       <div class="periodical">
       
@@ -681,16 +571,20 @@
       </div>
     
 
+    </div>
+    <span class="classic-citation"><span class="publication-authors">T. Le Minh, S. Donnet, F. Massol and S. Robin</span>. <strong>Hoeffding-type decomposition for U-statistics on bipartite networks</strong>. <i>Electronic Journal of Statistics</i>, 2025.</span>
+
+
     <div class="links">
     
     
-      <a href="http://arxiv.org/abs/2308.14518" class="btn btn-sm z-depth-0" role="button" target="_blank">arXiv</a>
+      <a href="http://arxiv.org/abs/2308.14518" class="publication-link btn btn-sm z-depth-0" target="_blank">arXiv</a>
     
     
-        <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
+        <a href="#leminh2025hoeffding-bibtex" class="bibtex publication-link btn btn-sm z-depth-0" aria-controls="leminh2025hoeffding-bibtex" aria-expanded="false">Bib</a>
     
     
-        <a href="https://doi.org/10.1214/25-EJS2402" class="btn btn-sm z-depth-0" role="button" target="_blank">DOI</a>
+        <a href="https://doi.org/10.1214/25-EJS2402" class="publication-link btn btn-sm z-depth-0" target="_blank">DOI</a>
     
     
     
@@ -709,7 +603,7 @@
 
     <!-- Hidden bibtex block -->
     
-    <div class="bibtex hidden">
+    <div id="leminh2025hoeffding-bibtex" class="bibtex hidden">
       <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">leminh2025hoeffding</span><span class="p">,</span>
   <span class="na">title</span> <span class="p">=</span> <span class="s">{Hoeffding-type decomposition for U-statistics on bipartite networks}</span><span class="p">,</span>
   <span class="na">author</span> <span class="p">=</span> <span class="s">{Le Minh, T. and Donnet, S. and Massol, F. and Robin, S.}</span><span class="p">,</span>
@@ -731,7 +625,8 @@
 
   <ol class="bibliography"></ol>
 
-  <ol class="bibliography"><li><div class="row">
+  <ol class="bibliography"><li>
+<div class="row publication-entry">
   <div class="col-sm-2 abbr">
   
     
@@ -740,23 +635,12 @@
   
   </div>
 
-  <div id="leminh2023ustatistics" class="col-sm-8">
+  <div id="leminh2023ustatistics" class="col-sm-10 publication-content">
+    <div class="modern-citation">
     
       <div class="title">U-statistics on bipartite exchangeable networks</div>
-      <div class="author">
-        
-          
-          
-          
-          
-          
-          
-            
-              <em>Le Minh, T.</em>
-            
-          
-        
-      </div>
+      <div class="author"><span class="publication-authors">T. Le Minh</span>
+</div>
 
       <div class="periodical">
       
@@ -768,16 +652,20 @@
       </div>
     
 
+    </div>
+    <span class="classic-citation"><span class="publication-authors">T. Le Minh</span>. <strong>U-statistics on bipartite exchangeable networks</strong>. <i>ESAIM: Probability and Statistics</i>, 2023.</span>
+
+
     <div class="links">
     
     
-      <a href="http://arxiv.org/abs/2103.12597" class="btn btn-sm z-depth-0" role="button" target="_blank">arXiv</a>
+      <a href="http://arxiv.org/abs/2103.12597" class="publication-link btn btn-sm z-depth-0" target="_blank">arXiv</a>
     
     
-        <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
+        <a href="#leminh2023ustatistics-bibtex" class="bibtex publication-link btn btn-sm z-depth-0" aria-controls="leminh2023ustatistics-bibtex" aria-expanded="false">Bib</a>
     
     
-        <a href="https://doi.org/10.1051/ps/2023010" class="btn btn-sm z-depth-0" role="button" target="_blank">DOI</a>
+        <a href="https://doi.org/10.1051/ps/2023010" class="publication-link btn btn-sm z-depth-0" target="_blank">DOI</a>
     
     
     
@@ -796,7 +684,7 @@
 
     <!-- Hidden bibtex block -->
     
-    <div class="bibtex hidden">
+    <div id="leminh2023ustatistics-bibtex" class="bibtex hidden">
       <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">leminh2023ustatistics</span><span class="p">,</span>
   <span class="na">title</span> <span class="p">=</span> <span class="s">{U-statistics on bipartite exchangeable networks}</span><span class="p">,</span>
   <span class="na">author</span> <span class="p">=</span> <span class="s">{Le Minh, T.}</span><span class="p">,</span>
@@ -817,7 +705,8 @@
 </div>
 </li></ol>
 
-  <ol class="bibliography"><li><div class="row">
+  <ol class="bibliography"><li>
+<div class="row publication-entry">
   <div class="col-sm-2 abbr">
   
     
@@ -826,177 +715,12 @@
   
   </div>
 
-  <div id="dubart2022coupling" class="col-sm-8">
+  <div id="dubart2022coupling" class="col-sm-10 publication-content">
+    <div class="modern-citation">
     
       <div class="title">Coupling ecological network analysis with high-throughput sequencing-based surveys: Lessons from the next-generation biomonitoring project</div>
-      <div class="author">
-        
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                  Dubart, M.,
-                
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                  Alonso, P.,
-                
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                  Barroso-Bergada, D.,
-                
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                  Becker, N.,
-                
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                  Bethune, K.,
-                
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                  Bohan, D.,
-                
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                  Boury, C.,
-                
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                  Cambon, M.,
-                
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                  Canard, E.,
-                
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                  Chancerel, E.,
-                
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                  and others, 
-                
-              
-            
-          
-        
-      </div>
+      <div class="author"><span class="publication-authors">M. Dubart, P. Alonso, D. Barroso-Bergada, N. Becker, K. Bethune<span class="remaining-authors">, D. A. Bohan, C. Boury, M. Cambon, E. Canard, E. Chancerel, J. Chiquet, P. David, N. de Manincor, S. Donnet, A. Duputié, B. Facon, E. Guichoux, T. Le Minh, S. Ortiz-Martínez, L. Piouceau, A. Sacco-Martret de Préville, M. Plantegenest, C. Poux, V. Ravigné, S. Robin, M. Trillat, C. Vacher, C. Vernière and F. Massol</span><button type="button" class="author-toggle" hidden="" data-collapsed-label="and 24 more authors">and 24 more authors</button></span>
+</div>
 
       <div class="periodical">
       
@@ -1008,14 +732,18 @@
       </div>
     
 
+    </div>
+    <span class="classic-citation"><span class="publication-authors">M. Dubart, P. Alonso, D. Barroso-Bergada, N. Becker, K. Bethune<span class="remaining-authors">, D. A. Bohan, C. Boury, M. Cambon, E. Canard, E. Chancerel, J. Chiquet, P. David, N. de Manincor, S. Donnet, A. Duputié, B. Facon, E. Guichoux, T. Le Minh, S. Ortiz-Martínez, L. Piouceau, A. Sacco-Martret de Préville, M. Plantegenest, C. Poux, V. Ravigné, S. Robin, M. Trillat, C. Vacher, C. Vernière and F. Massol</span><button type="button" class="author-toggle" hidden="" data-collapsed-label="and 24 more authors">and 24 more authors</button></span>. <strong>Coupling ecological network analysis with high-throughput sequencing-based surveys: Lessons from the next-generation biomonitoring project</strong>. <i>Advances in Ecological Research</i>, 2022.</span>
+
+
     <div class="links">
     
     
     
-        <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
+        <a href="#dubart2022coupling-bibtex" class="bibtex publication-link btn btn-sm z-depth-0" aria-controls="dubart2022coupling-bibtex" aria-expanded="false">Bib</a>
     
     
-        <a href="https://doi.org/10.1016/bs.aecr.2021.10.007" class="btn btn-sm z-depth-0" role="button" target="_blank">DOI</a>
+        <a href="https://doi.org/10.1016/bs.aecr.2021.10.007" class="publication-link btn btn-sm z-depth-0" target="_blank">DOI</a>
     
     
     
@@ -1034,10 +762,10 @@
 
     <!-- Hidden bibtex block -->
     
-    <div class="bibtex hidden">
+    <div id="dubart2022coupling-bibtex" class="bibtex hidden">
       <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">dubart2022coupling</span><span class="p">,</span>
   <span class="na">title</span> <span class="p">=</span> <span class="s">{Coupling ecological network analysis with high-throughput sequencing-based surveys: Lessons from the next-generation biomonitoring project}</span><span class="p">,</span>
-  <span class="na">author</span> <span class="p">=</span> <span class="s">{Dubart, M. and Alonso, P. and Barroso-Bergada, D. and Becker, N. and Bethune, K. and Bohan, D. and Boury, C. and Cambon, M. and Canard, E. and Chancerel, E. and others}</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Dubart, M. and Alonso, P. and Barroso-Bergada, D. and Becker, N. and Bethune, K. and Bohan, D. A. and Boury, C. and Cambon, M. and Canard, E. and Chancerel, E. and Chiquet, J. and David, P. and de Manincor, N. and Donnet, S. and Duputié, A. and Facon, B. and Guichoux, E. and Le Minh, T. and Ortiz-Martínez, S. and Piouceau, L. and Sacco-Martret de Préville, A. and Plantegenest, M. and Poux, C. and Ravigné, V. and Robin, S. and Trillat, M. and Vacher, C. and Vernière, C. and Massol, F.}</span><span class="p">,</span>
   <span class="na">volume</span> <span class="p">=</span> <span class="s">{65}</span><span class="p">,</span>
   <span class="na">pages</span> <span class="p">=</span> <span class="s">{367--430}</span><span class="p">,</span>
   <span class="na">year</span> <span class="p">=</span> <span class="s">{2022}</span><span class="p">,</span>
@@ -1056,7 +784,8 @@
 
   <ol class="bibliography"></ol>
 
-  <ol class="bibliography"><li><div class="row">
+  <ol class="bibliography"><li>
+<div class="row publication-entry">
   <div class="col-sm-2 abbr">
   
     
@@ -1065,85 +794,12 @@
   
   </div>
 
-  <div id="li2019visual" class="col-sm-8">
+  <div id="li2019visual" class="col-sm-10 publication-content">
+    <div class="modern-citation">
     
       <div class="title">Visual scan patterns reflect to human-computer interactions on processing different types of messages in the flight deck</div>
-      <div class="author">
-        
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                  Li, W.-C.,
-                
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                  Zhang, J.,
-                
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-            
-              
-                <em>Le Minh, T.</em>,
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                  Cao, J.,
-                
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                  and Wang, L.
-                
-              
-            
-          
-        
-      </div>
+      <div class="author"><span class="publication-authors">W.-C. Li, J. Zhang, T. Le Minh, J. Cao and L. Wang</span>
+</div>
 
       <div class="periodical">
       
@@ -1155,14 +811,18 @@
       </div>
     
 
+    </div>
+    <span class="classic-citation"><span class="publication-authors">W.-C. Li, J. Zhang, T. Le Minh, J. Cao and L. Wang</span>. <strong>Visual scan patterns reflect to human-computer interactions on processing different types of messages in the flight deck</strong>. <i>International Journal of Industrial Ergonomics</i>, 2019.</span>
+
+
     <div class="links">
     
     
     
-        <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
+        <a href="#li2019visual-bibtex" class="bibtex publication-link btn btn-sm z-depth-0" aria-controls="li2019visual-bibtex" aria-expanded="false">Bib</a>
     
     
-        <a href="https://doi.org/10.1016/j.ergon.2019.04.003" class="btn btn-sm z-depth-0" role="button" target="_blank">DOI</a>
+        <a href="https://doi.org/10.1016/j.ergon.2019.04.003" class="publication-link btn btn-sm z-depth-0" target="_blank">DOI</a>
     
     
     
@@ -1181,7 +841,7 @@
 
     <!-- Hidden bibtex block -->
     
-    <div class="bibtex hidden">
+    <div id="li2019visual-bibtex" class="bibtex hidden">
       <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">li2019visual</span><span class="p">,</span>
   <span class="na">title</span> <span class="p">=</span> <span class="s">{Visual scan patterns reflect to human-computer interactions on processing different types of messages in the flight deck}</span><span class="p">,</span>
   <span class="na">author</span> <span class="p">=</span> <span class="s">{Li, W.-C. and Zhang, J. and Le Minh, T. and Cao, J. and Wang, L.}</span><span class="p">,</span>
@@ -1207,28 +867,18 @@
 
 <div class="publications">
 
-<ol class="bibliography"><li><div class="row">
+<ol class="bibliography"><li>
+<div class="row publication-entry">
   <div class="col-sm-2 abbr">
   
   </div>
 
-  <div id="le2023u" class="col-sm-8">
+  <div id="le2023u" class="col-sm-10 publication-content">
+    <div class="modern-citation">
     
       <div class="title">U-statistics of row-column exchangeable matrices: application to ecological network analysis</div>
-      <div class="author">
-        
-          
-          
-          
-          
-          
-          
-            
-              <em>Le Minh, T.</em>
-            
-          
-        
-      </div>
+      <div class="author"><span class="publication-authors">T. Le Minh</span>
+</div>
 
       <div class="periodical">
       
@@ -1240,6 +890,10 @@
       </div>
     
 
+    </div>
+    <span class="classic-citation"><span class="publication-authors">T. Le Minh</span>. <strong>U-statistics of row-column exchangeable matrices: application to ecological network analysis</strong>. <i>Universite Paris-Saclay</i>, 2023.</span>
+
+
     <div class="links">
     
     
@@ -1249,11 +903,11 @@
     
     
       
-      <a href="/assets/pdf/phd.pdf" class="btn btn-sm z-depth-0" role="button" target="_blank">PDF</a>
+      <a href="/assets/pdf/phd.pdf" class="publication-link btn btn-sm z-depth-0" target="_blank">PDF</a>
       
     
     
-      <a href="https://www.theses.fr/2023UPASM027" class="btn btn-sm z-depth-0" role="button" target="_blank">URL</a>
+      <a href="https://www.theses.fr/2023UPASM027" class="publication-link btn btn-sm z-depth-0" target="_blank">URL</a>
     
     
     
@@ -1283,8 +937,8 @@
     <!-- Footer -->
 
     
-<footer class="fixed-bottom">
-  <div class="container mt-0">
+<footer class="sticky-bottom mt-5">
+  <div class="container">
     &copy; Copyright 2026 Tâm  Le Minh.
     Powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
 
@@ -1309,7 +963,7 @@
 
 
 <!-- Load Common JS -->
-<script src="/assets/js/common.js"></script>
+<script src="/assets/js/common.js?v=1794302485"></script>
 
 
 </html>

@@ -49,8 +49,8 @@
 
 <!-- Theming-->
 
-<script src="/assets/js/theme.js"></script>
-<script src="/assets/js/dark_mode.js"></script>
+<script src="/assets/js/theme.js?v=1794302485?v=1794302485"></script>
+<script src="/assets/js/dark_mode.js?v=1794302485?v=1794302485"></script>
 
 
 
@@ -87,14 +87,14 @@
 
   </head>
 
-  <body class="fixed-top-nav ">
+  <body class="fixed-top-nav sticky-bottom-footer">
 
     <!-- Header -->
 
     <header>
 
     <!-- Nav Bar -->
-    <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top">
+    <nav id="navbar" class="navbar navbar-light navbar-expand-md fixed-top">
     <div class="container">
       
       <a class="navbar-brand title font-weight-lighter" href="https://tam-leminh.github.io/">
@@ -181,16 +181,17 @@
           
           
           
-          
-            <div class = "toggle-container">
-              <a id = "light-toggle">
-                  <i class="fas fa-moon"></i>
-                  <i class="fas fa-sun"></i>
-              </a>
-            </div>
-          
         </ul>
       </div>
+      
+        <div class="theme-picker" hidden>
+          <button id="light-toggle" type="button" aria-label="Switch to dark theme" title="Switch to dark theme">
+            <i class="fas fa-moon" aria-hidden="true"></i>
+            <i class="fas fa-sun" aria-hidden="true"></i>
+            <i class="fas fa-scroll" aria-hidden="true"></i>
+          </button>
+        </div>
+      
     </div>
   </nav>
 
@@ -222,8 +223,8 @@
     <!-- Footer -->
 
     
-<footer class="fixed-bottom">
-  <div class="container mt-0">
+<footer class="sticky-bottom mt-5">
+  <div class="container">
     &copy; Copyright 2026 Tâm  Le Minh.
     Powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
 
@@ -248,7 +249,7 @@
 
 
 <!-- Load Common JS -->
-<script src="/assets/js/common.js"></script>
+<script src="/assets/js/common.js?v=1794302485"></script>
 
 
 </html>

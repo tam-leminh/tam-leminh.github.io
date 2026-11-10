@@ -6,6 +6,7 @@
  * Themes
  ******************************************************************************/
 :root {
+  color-scheme: light;
   --global-bg-color: #ffffff;
   --global-code-bg-color: rgba(181, 9, 172, 0.05);
   --global-text-color: #000000;
@@ -19,16 +20,9 @@
   --global-abbr-color: #009f06;
   --global-abbr-preprint-color: #0076df;
 }
-:root .fa-sun {
-  display: none;
-}
-:root .fa-moon {
-  padding-left: 10px;
-  padding-top: 12px;
-  display: block;
-}
 
 html[data-theme=dark] {
+  color-scheme: dark;
   --global-bg-color: rgb(66.25, 66.25, 66.25);
   --global-code-bg-color: #2c3237;
   --global-text-color: #e8e8e8;
@@ -41,13 +35,65 @@ html[data-theme=dark] {
   --global-distill-app-color: #e8e8e8;
   --global-abbr-color: #F29105;
 }
-html[data-theme=dark] .fa-sun {
-  padding-left: 10px;
-  padding-top: 12px;
-  display: block;
+
+.theme-picker {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-left: 1rem;
+  font-size: 0.8rem;
+  white-space: nowrap;
 }
-html[data-theme=dark] .fa-moon {
+.theme-picker[hidden] {
   display: none;
+}
+.theme-picker button {
+  color: var(--global-text-color);
+  background: transparent;
+  border: 0;
+  padding: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.theme-picker .fa-sun, .theme-picker .fa-scroll {
+  display: none;
+}
+
+@media (max-width: 767.98px) {
+  #navbar .navbar-brand {
+    order: 1;
+    margin-right: 0.5rem;
+  }
+  #navbar .theme-picker {
+    order: 2;
+    margin-left: auto;
+  }
+  #navbar .navbar-toggler {
+    order: 3;
+    margin-left: 0.5rem !important;
+    padding: 0.25rem;
+  }
+  #navbar .navbar-collapse {
+    order: 4;
+  }
+}
+html[data-theme=dark] .theme-picker .fa-moon {
+  display: none;
+}
+html[data-theme=dark] .theme-picker .fa-scroll {
+  display: inline;
+}
+
+html[data-theme=classic] .theme-picker .fa-moon {
+  display: none;
+}
+html[data-theme=classic] .theme-picker .fa-sun {
+  display: inline;
+}
+
+#light-toggle:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
 }
 
 /******************************************************************************
@@ -68,7 +114,7 @@ body.sticky-bottom-footer {
 }
 
 .container {
-  max-width: 800px;
+  max-width: 900px;
 }
 
 .profile img {
@@ -391,6 +437,21 @@ footer.sticky-bottom {
   text-align: right;
 }
 
+.publication-authors .author-toggle {
+  border: 0;
+  padding: 0;
+  margin-left: 0.3em;
+  background: transparent;
+  color: var(--global-theme-color);
+  font: inherit;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.publication-authors [hidden] {
+  display: none !important;
+}
+
 .publications {
   margin-top: 2rem;
 }
@@ -578,6 +639,345 @@ d-appendix a, d-appendix a.footnote-backlink {
 }
 d-appendix a:hover, d-appendix a.footnote-backlink:hover {
   color: var(--global-hover-color) !important;
+}
+
+.classic-citation {
+  display: none;
+}
+
+html[data-theme=classic] {
+  color-scheme: light;
+  --global-bg-color: #fff8dc;
+  --global-code-bg-color: #f5edcf;
+  --global-text-color: #000;
+  --global-text-color-light: #333;
+  --global-theme-color: #0000ee;
+  --global-hover-color: #0000ee;
+  --global-footer-bg-color: var(--global-bg-color);
+  --global-footer-text-color: #000;
+  --global-footer-link-color: #0000ee;
+  --global-distill-app-color: #000;
+  --global-abbr-color: var(--global-bg-color);
+  --global-abbr-preprint-color: var(--global-bg-color);
+  --classic-rule-color: #8b8065;
+  --classic-control-bg-color: #f2e8c9;
+}
+html[data-theme=classic] body {
+  padding-top: 0;
+  padding-bottom: 0;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 16px;
+  line-height: 1.4;
+  color: #000;
+  background: var(--global-bg-color);
+}
+html[data-theme=classic] :is(p, h1, h2, h3, h4, h5, h6, em, div, span, strong):not(.fa, .fas, .far, .fab, .fal, .fad, .ai,
+.MathJax, .MathJax *, .MathJax_Display, .MathJax_Display *,
+mjx-container, mjx-container *, .katex, .katex *,
+pre, pre *, code, code *) {
+  font-family: inherit;
+}
+html[data-theme=classic] h1, html[data-theme=classic] h2, html[data-theme=classic] h3, html[data-theme=classic] h4, html[data-theme=classic] h5, html[data-theme=classic] h6,
+html[data-theme=classic] .publications h1, html[data-theme=classic] .publications h2, html[data-theme=classic] .projects h2.category {
+  color: #000;
+  font-weight: bold;
+  line-height: 1.2;
+  text-align: left;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+html[data-theme=classic] h1, html[data-theme=classic] .header-bar h1 {
+  font-size: 2em;
+}
+html[data-theme=classic] h2 {
+  font-size: 1.5em;
+}
+html[data-theme=classic] h3 {
+  font-size: 1.17em;
+}
+html[data-theme=classic] h4, html[data-theme=classic] h5, html[data-theme=classic] h6 {
+  font-size: 1em;
+}
+html[data-theme=classic] strong, html[data-theme=classic] b, html[data-theme=classic] .publications .title {
+  font-weight: bold;
+}
+html[data-theme=classic] p {
+  margin-bottom: 1em;
+}
+html[data-theme=classic] a, html[data-theme=classic] table.table a {
+  color: #0000ee !important;
+  text-decoration: underline !important;
+  text-underline-offset: 0.1em;
+}
+html[data-theme=classic] a:visited, html[data-theme=classic] table.table a:visited {
+  color: #551a8b !important;
+}
+html[data-theme=classic] a:active, html[data-theme=classic] table.table a:active {
+  color: #ee0000 !important;
+}
+html[data-theme=classic] a:focus-visible, html[data-theme=classic] button:focus-visible, html[data-theme=classic] select:focus-visible,
+html[data-theme=classic] input:focus-visible, html[data-theme=classic] textarea:focus-visible, html[data-theme=classic] summary:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+html[data-theme=classic] .container {
+  max-width: 1100px;
+}
+html[data-theme=classic] body > .container.mt-5 {
+  margin-top: 1.5rem !important;
+}
+html[data-theme=classic] hr {
+  border: 0;
+  border-top: 1px solid var(--classic-rule-color);
+}
+html[data-theme=classic] .post > .post-header {
+  border-bottom: 1px solid var(--classic-rule-color);
+  padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
+}
+html[data-theme=classic] .post > .post-header > :last-child {
+  margin-bottom: 0;
+}
+html[data-theme=classic] .post > .post-header .post-description:empty {
+  display: none;
+}
+html[data-theme=classic] .post > article > :not(h1, h2, h3, h4, h5, h6) + :is(h2, h3, h4),
+html[data-theme=classic] .post > article > .clearfix > :not(h1, h2, h3, h4, h5, h6) + :is(h2, h3, h4),
+html[data-theme=classic] body > .container > :not(h1, h2, h3, h4, h5, h6) + :is(h2, h3, h4),
+html[data-theme=classic] .sky-catalogue > :not(h1, h2, h3, h4, h5, h6) + :is(h2, h3, h4) {
+  border-top: 1px solid var(--classic-rule-color);
+  padding-top: 1rem;
+  margin-top: 1.5rem;
+}
+html[data-theme=classic] #navbar {
+  position: static;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--classic-rule-color);
+  background: var(--global-bg-color);
+  box-shadow: none;
+  opacity: 1;
+}
+html[data-theme=classic] #navbar > .container {
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 0.5rem 1.25rem;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+html[data-theme=classic] #navbar .navbar-brand {
+  order: 1;
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+}
+html[data-theme=classic] #navbar .navbar-toggler {
+  display: none;
+}
+html[data-theme=classic] #navbar .navbar-collapse {
+  display: block !important;
+  height: auto !important;
+  flex: 1 1 auto;
+  order: 2;
+  text-align: left !important;
+}
+html[data-theme=classic] #navbar .navbar-nav {
+  flex-direction: row;
+  flex-wrap: wrap !important;
+  gap: 0.4rem 1rem;
+  margin: 0 !important;
+}
+html[data-theme=classic] #navbar .nav-link {
+  padding: 0;
+}
+html[data-theme=classic] #navbar .nav-item.active > .nav-link {
+  font-weight: bold;
+}
+html[data-theme=classic] #navbar .theme-picker {
+  order: 3;
+  margin: 0;
+}
+html[data-theme=classic] #navbar .dropdown-menu {
+  border: 1px solid var(--classic-rule-color);
+  border-radius: 0;
+  background: var(--global-bg-color);
+  box-shadow: none;
+}
+html[data-theme=classic] button, html[data-theme=classic] input, html[data-theme=classic] select, html[data-theme=classic] textarea {
+  font-family: inherit;
+}
+html[data-theme=classic] .btn {
+  color: #000;
+  background: var(--classic-control-bg-color);
+  border: 1px solid var(--classic-rule-color);
+  border-radius: 0;
+  box-shadow: none !important;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.4;
+  letter-spacing: normal;
+  text-transform: none;
+  padding: 0.15em 0.45em;
+}
+html[data-theme=classic] .profile img, html[data-theme=classic] .card, html[data-theme=classic] pre, html[data-theme=classic] code {
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+html[data-theme=classic] .card {
+  background: var(--global-bg-color);
+  border: 1px solid var(--classic-rule-color);
+}
+html[data-theme=classic] .projects .card .card-title {
+  color: #000;
+}
+html[data-theme=classic] .projects h2.category {
+  border-bottom-color: var(--classic-rule-color);
+}
+html[data-theme=classic] blockquote {
+  border-left: 2px solid var(--classic-rule-color);
+  font-size: 1rem;
+}
+html[data-theme=classic] pre, html[data-theme=classic] code {
+  color: #000;
+}
+html[data-theme=classic] pre, html[data-theme=classic] pre span, html[data-theme=classic] code, html[data-theme=classic] code span, html[data-theme=classic] kbd, html[data-theme=classic] samp {
+  font-family: monospace;
+}
+html[data-theme=classic] pre {
+  border: 1px solid var(--classic-rule-color);
+}
+html[data-theme=classic] .publications {
+  margin-top: 0.75rem;
+}
+html[data-theme=classic] .publications h2.year {
+  color: #000;
+  border-top-color: var(--classic-rule-color);
+  margin-bottom: 1rem;
+  text-align: left;
+}
+html[data-theme=classic] .publications ol.bibliography {
+  margin: 0;
+  padding: 0;
+}
+html[data-theme=classic] .publications ol.bibliography > li {
+  margin-bottom: 0.75rem;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+html[data-theme=classic] .publications .publication-entry {
+  display: block;
+  margin: 0;
+}
+html[data-theme=classic] .publications .publication-entry > .abbr {
+  display: none;
+}
+html[data-theme=classic] .publications .publication-content {
+  width: 100%;
+  max-width: none;
+  padding: 0;
+}
+html[data-theme=classic] .publications .modern-citation {
+  display: none;
+}
+html[data-theme=classic] .publications .classic-citation, html[data-theme=classic] .publications .links {
+  display: inline;
+}
+html[data-theme=classic] .publications .publication-content .links a.publication-link {
+  display: inline;
+  margin: 0 0.3em 0 0;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  font: inherit;
+  vertical-align: baseline;
+  white-space: nowrap;
+  overflow: visible;
+  position: static;
+}
+html[data-theme=classic] .publications .publication-content .links a.publication-link::before {
+  content: "[";
+}
+html[data-theme=classic] .publications .publication-content .links a.publication-link::after {
+  content: "]";
+}
+html[data-theme=classic] .publications .hidden.open {
+  margin-top: 0.5rem;
+}
+html[data-theme=classic] .sky-catalogue .sky-source {
+  margin: 0.75rem 0;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+html[data-theme=classic] .sky-catalogue .sky-source > h3, html[data-theme=classic] .sky-catalogue .sky-source > .sky-citation {
+  display: none;
+}
+html[data-theme=classic] .sky-catalogue .sky-source > .classic-citation {
+  display: inline;
+}
+html[data-theme=classic] .sky-catalogue .sky-source > a {
+  display: inline;
+  font: inherit;
+  vertical-align: baseline;
+  white-space: nowrap;
+}
+html[data-theme=classic] .sky-catalogue .sky-source > a::before {
+  content: "[";
+}
+html[data-theme=classic] .sky-catalogue .sky-source > a::after {
+  content: "]";
+}
+html[data-theme=classic] .header-bar {
+  text-align: left;
+  padding: 0 0 1rem;
+}
+html[data-theme=classic] .post-list li {
+  border-bottom-color: var(--classic-rule-color);
+  padding: 1rem 0;
+}
+html[data-theme=classic] .social {
+  text-align: left;
+}
+html[data-theme=classic] .social .contact-icons {
+  font-size: 1.5rem;
+}
+html[data-theme=classic] footer.fixed-bottom, html[data-theme=classic] footer.sticky-bottom {
+  position: static;
+  margin-top: 2rem !important;
+  padding: 1rem 0;
+  border-top: 1px solid var(--classic-rule-color);
+  color: #000;
+  background: var(--global-bg-color);
+  font-size: 0.875rem;
+}
+html[data-theme=classic] .research-sky {
+  border-radius: 0;
+  border-color: var(--classic-rule-color);
+}
+html[data-theme=classic] .research-sky a {
+  color: #b9dbff !important;
+}
+html[data-theme=classic] .research-sky a:visited {
+  color: #dfc6ff !important;
+}
+html[data-theme=classic] .research-sky h3, html[data-theme=classic] .research-sky h4 {
+  color: #f3f5ff;
+}
+html[data-theme=classic] .research-sky .sky-toolbar select, html[data-theme=classic] .research-sky .sky-toolbar button,
+html[data-theme=classic] .research-sky .sky-thread-choices button, html[data-theme=classic] .research-sky .sky-tag, html[data-theme=classic] .research-sky .sky-tooltip {
+  border-radius: 0;
+  font-family: "Times New Roman", Times, serif;
+}
+html[data-theme=classic] .research-sky .sky-tooltip {
+  box-shadow: none;
+}
+@media (max-width: 767px) {
+  html[data-theme=classic] #navbar .navbar-collapse {
+    flex-basis: 100%;
+  }
+  html[data-theme=classic] .profile {
+    margin-left: 0;
+    margin-bottom: 1rem;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
